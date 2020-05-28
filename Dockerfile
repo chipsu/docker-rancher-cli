@@ -1,6 +1,6 @@
 FROM alpine:3
 
-RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
+RUN apk update && apk add ca-certificates docker-cli && rm -rf /var/cache/apk/*
 
 RUN wget -qO- https://releases.rancher.com/cli/v0.6.12/rancher-linux-amd64-v0.6.12.tar.gz | tar -xvz --strip=2
 RUN chmod +x rancher
